@@ -1,0 +1,21 @@
+form {
+	input[type=text] {
+		font-size: 1rem;
+		border: 1px solid $yellow-darker;
+		border-right: none;
+		border-radius: 5px 0 0 5px;
+		background: $yellow-lighter;
+	}	
+
+	&.search {
+		display: flex;
+
+		button[type=submit] {
+			font-size: 1em;
+			border: 1px solid $yellow-darker;
+			border-radius: 0 5px 5px 0;
+			background: $yellow;
+		}
+	}
+
+}
