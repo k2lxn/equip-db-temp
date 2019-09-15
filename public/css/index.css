@@ -16,9 +16,6 @@ html, body {
   background: #fff8c7;
   color: #2e2404; }
 
-ul {
-  list-style-type: none; }
-
 a {
   text-decoration: none;
   color: #2e2404; }
@@ -26,11 +23,40 @@ a {
 button {
   cursor: pointer; }
 
+figure {
+  position: relative;
+  background-color: #fcec83;
+  padding: 15px;
+  border-radius: 2px; }
+  figure img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 10px; }
+
+.home-icon {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 10px;
+  background: linear-gradient(to left, #2e2404, #2e2404 40%, transparent 40%, transparent 60%, #2e2404 60%); }
+  .home-icon:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 7px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 12px solid #2e2404; }
+
 form input[type=text] {
   font-size: 1rem;
   border: 1px solid #2e2404;
   border-right: none;
-  border-radius: 5px 0 0 5px;
+  border-radius: 2px 0 0 2px;
   background: #fff8c7; }
 
 form.search {
@@ -38,7 +64,7 @@ form.search {
   form.search button[type=submit] {
     font-size: 1em;
     border: 1px solid #2e2404;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 2px 2px 0;
     background: #f7be02; }
 
 header {
@@ -70,20 +96,25 @@ header {
   header input[type=text] {
     width: 300px; }
 
-.home-icon {
-  display: inline-block;
-  position: relative;
-  width: 16px;
-  height: 10px;
-  background: linear-gradient(to left, #2e2404, #2e2404 40%, transparent 40%, transparent 60%, #2e2404 60%); }
-  .home-icon:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 7px;
-    left: -2px;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 12px solid #2e2404; }
+#content-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 2000px;
+  padding: 15px 30px;
+  box-sizing: border-box; }
+  #content-container #main-content {
+    flex-basis: 65%;
+    flex-grow: 0;
+    position: relative;
+    padding-right: 20px; }
+  #content-container #sidebar {
+    flex-basis: 35%;
+    flex-grow: 0;
+    position: relative; }
+    #content-container #sidebar p#quantity {
+      font-weight: bold; }
+  #content-container section {
+    margin-top: 20px; }
+    #content-container section > div {
+      margin-top: 15px; }

@@ -39,24 +39,44 @@ header {
 }
 
 
-.home-icon {
-	display: inline-block;
-	position: relative;
-	width: 16px;
-	height: 10px;
-	background: linear-gradient(to left, $yellow-darker, $yellow-darker 40%, transparent 40%, transparent 60%, $yellow-darker 60% );
+#content-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 2000px;
+	padding: 15px 30px;
+	box-sizing: border-box;
 
-	&:after {
-		content: "";
-		display: block;
-		position: absolute;
-		bottom: 7px;
-		left: -2px;
-		width: 0;
-		height: 0;
-	
-		border-left: 10px solid transparent;
-		border-right: 10px solid transparent;
-		border-bottom: 12px solid $yellow-darker;
+	#main-content {
+		flex-basis: 65%;
+		flex-grow: 0;
+		position: relative;
+		padding-right: 20px;
+	}
+
+	#sidebar {
+		flex-basis: 35%;
+		flex-grow: 0;
+		position: relative;
+
+		p#quantity {
+			font-weight: bold;
+		}
+	}
+
+	section {
+		margin-top: 20px;	
+
+		> div {
+			margin-top: 15px;
+		}
 	}
 }
+
+
+
+
+
+
+
+
