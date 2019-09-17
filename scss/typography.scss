@@ -1,8 +1,68 @@
-body {
-	font-family: sans-serif;
+
+@font-face {
+	font-family: National;
+	src: url("../fonts/national/National2-Regular.otf") format("opentype");
+	font-style: normal;
+	font-weight: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: inherit;
-	color: $yellow-darker;
+@font-face {
+	font-family: National;
+	src: url("../fonts/national/National2-Medium.otf") format("opentype");
+	font-style: normal;
+	font-weight: 600;
 }
+
+@font-face {
+	font-family: National;
+	src: url("../fonts/national/National2-Bold.otf") format("opentype");
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'),
+      url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'),
+      url('../fonts/Open_Sans/OpenSans-SemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+	font-family: "National", "Open Sans", Helvetica, sans-serif;
+	font-weight: 600;
+	color: inherit;
+}
+
+h2 {
+	font-family: "National", "Open Sans", Helvetica, sans-serif;
+	font-weight: normal;
+	color: inherit;
+}
+
+h3, h4, h5, h6 {
+	font-family: inherit;
+	color: inherit;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+

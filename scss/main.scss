@@ -12,6 +12,7 @@ header {
 		display: inline-block;
 
 		a {
+			font-family: "National";
 			font-size: 1.3rem;
 			vertical-align: bottom;
 			position: relative;
@@ -51,7 +52,7 @@ header {
 		flex-basis: 65%;
 		flex-grow: 0;
 		position: relative;
-		padding-right: 20px;
+		padding-right: 40px;
 	}
 
 	#sidebar {

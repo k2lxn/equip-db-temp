@@ -1,9 +1,50 @@
-body {
-  font-family: sans-serif; }
+@font-face {
+  font-family: National;
+  src: url("../fonts/national/National2-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal; }
 
-h1, h2, h3, h4, h5, h6 {
+@font-face {
+  font-family: National;
+  src: url("../fonts/national/National2-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600; }
+
+@font-face {
+  font-family: National;
+  src: url("../fonts/national/National2-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: bold; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local("Open Sans"), url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local("Open Sans"), url("../fonts/Open_Sans/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+body {
+  font-family: "Open Sans", sans-serif; }
+
+h1 {
+  font-family: "National", "Open Sans", Helvetica, sans-serif;
+  font-weight: 600;
+  color: inherit; }
+
+h2 {
+  font-family: "National", "Open Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  color: inherit; }
+
+h3, h4, h5, h6 {
   font-family: inherit;
-  color: #2e2404; }
+  color: inherit;
+  font-weight: bold; }
 
 * {
   margin: 0;
@@ -13,8 +54,8 @@ html, body {
   width: 100%;
   min-height: 100%;
   font-size: 16px;
-  background: #fff8c7;
-  color: #2e2404; }
+  background: #f8f9fa;
+  color: #212529; }
 
 a {
   text-decoration: none;
@@ -25,7 +66,7 @@ button {
 
 figure {
   position: relative;
-  background-color: #fcec83;
+  background-color: #dee2e6;
   padding: 15px;
   border-radius: 2px; }
   figure img {
@@ -54,18 +95,17 @@ figure {
 
 form input[type=text] {
   font-size: 1rem;
-  border: 1px solid #2e2404;
+  border: 1px solid #343a40;
   border-right: none;
-  border-radius: 2px 0 0 2px;
-  background: #fff8c7; }
+  border-radius: 2px 0 0 2px; }
 
 form.search {
   display: flex; }
   form.search button[type=submit] {
     font-size: 1em;
-    border: 1px solid #2e2404;
+    border: 1px solid #343a40;
     border-radius: 0 2px 2px 0;
-    background: #f7be02; }
+    background: #dee2e6; }
 
 header {
   width: 100%;
@@ -78,6 +118,7 @@ header {
   header #home {
     display: inline-block; }
     header #home a {
+      font-family: "National";
       font-size: 1.3rem;
       vertical-align: bottom;
       position: relative; }
@@ -107,7 +148,7 @@ header {
     flex-basis: 65%;
     flex-grow: 0;
     position: relative;
-    padding-right: 20px; }
+    padding-right: 40px; }
   #content-container #sidebar {
     flex-basis: 35%;
     flex-grow: 0;
