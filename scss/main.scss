@@ -5,17 +5,23 @@ header {
 	justify-content: space-between;
 	padding: 15px 30px;
 	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	height: max-content;
+	z-index: 100;
 
-	border-bottom: 1px solid $yellow-darker;
+	background-color: $gray-200;
+	border-bottom: 1px solid $gray-800;
 
 	#home {
 		display: inline-block;
 
 		a {
 			font-family: "National";
-			font-size: 1.3rem;
+			font-size: 1.2rem;
 			vertical-align: bottom;
 			position: relative;
+			top: -4px;
 		}
 		.home-icon {
 			margin-left: 6px;
@@ -47,12 +53,18 @@ header {
 	max-width: 2000px;
 	padding: 15px 30px;
 	box-sizing: border-box;
+	position: relative;
+	top: 70px;
 
 	#main-content {
 		flex-basis: 65%;
 		flex-grow: 0;
 		position: relative;
 		padding-right: 40px;
+
+		#overview p {
+			font-size: 1.2rem;
+		}
 	}
 
 	#sidebar {
@@ -63,14 +75,92 @@ header {
 		p#quantity {
 			font-weight: bold;
 		}
+
+		section {
+			padding: 0 15px 15px;
+			background-color: $gray-200;
+
+			h2 {
+				background-color: #fff;
+				width: calc(100% + 15px);
+				margin-left: -15px;
+				padding: 8px 12px;
+				font-size: 1.3rem;
+			}
+
+			h3 {
+				font-size: 1rem;
+			}
+
+			ul {
+				padding-left: 25px;
+			}
+
+			li {
+				font-size: .9rem;
+			}
+		}
+
+		figure {
+			position: relative;
+			background-color: $gray-200;
+			padding: 8px;
+			border-radius: 2px;
+
+			img {
+				display: block;
+				width: 100%;
+				//max-width: 400px;
+				margin: 0 auto 10px;
+			}
+
+			figcaption {
+				padding: 0 10px;
+				p#quantity {
+					font-size: 1.2rem;
+					margin-bottom: 10px;
+				}
+			}
+		}
 	}
 
 	section {
-		margin-top: 20px;	
+		margin: 20px 0 30px;	
 
 		> div {
 			margin-top: 15px;
+			margin-bottom: 25px;
+			padding-left: 15px;
 		}
+
+		&:first-of-type > div {
+			padding-left: 0;
+		}
+	}
+
+	section#manufacturer ul {
+		list-style-type: none;
+		padding-left: 15px;
+		margin-top: 15px;
+		margin-bottom: 25px;
+
+		li {
+			margin-bottom: 15px;
+		}
+	}
+
+	div#warnings {
+		background-color: lighten($red, 15%);
+		padding: 8px;
+		border-radius: 2px;
+	}
+
+	h3 {
+		padding-bottom: 8px;
+	}
+
+	hr {
+		width: 80%;
 	}
 }
 
